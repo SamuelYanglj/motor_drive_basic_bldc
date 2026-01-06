@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "bsp_io.h": "c",
+        "n32g43x.h": "c"
+    }
+}

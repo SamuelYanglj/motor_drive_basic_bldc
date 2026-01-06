@@ -1,0 +1,193 @@
+# ============================================================
+# ARM/Keil MDK 嵌入式项目 .gitignore
+# ============================================================
+
+# ==================== 项目特定的忽略规则 ====================
+
+# 1. Project/Objects 文件夹 - 保留文件夹但忽略所有内容
+Project/Objects/*
+# 保留 .gitkeep 文件以确保文件夹存在（如果需要）
+!Project/Objects/.gitkeep
+
+# 2. Project/Listings 文件夹 - 保留文件夹但忽略所有内容
+Project/Listings/*
+!Project/Listings/.gitkeep
+
+# 3. 用户特定的 Keil 配置文件（不应提交）
+Project/*.uvguix.*
+Project/*.uvoptx.user
+Project/*.uvprojx.user
+
+# ==================== Keil MDK 项目文件 ====================
+
+# 编译中间文件
+*.o
+*.su
+*.d
+*.crf
+*.iex
+*.dep
+*.lnp
+*.lst
+*.map
+*.sym
+*.pbi
+*.pbd
+*.pbd_svd
+*.scvd
+*.sfd
+*.sct
+
+# 可执行文件和输出格式
+*.axf
+*.elf
+*.hex
+*.bin
+*.out
+*.exe
+
+# 调试文件
+*.dbg
+*.pdb
+*.idb
+*.ilk
+
+# 预处理文件
+*.i
+*.ii
+*.s
+*.S
+
+# 构建日志
+*.build_log.htm
+build_log.*
+*.log
+
+# ==================== IDE 和编辑器文件 ====================
+
+# Keil MDK 工作区文件（根据需求决定是否提交）
+# 如果你希望提交项目配置文件，注释掉下面三行
+# Project/*.uvoptx
+# Project/*.uvprojx
+# *.uvmpw
+
+# IAR Embedded Workbench
+*.eww
+*.ewp
+*.ewd
+*.ewt
+
+# Eclipse/ARM Development Studio
+.project
+.cproject
+.settings/
+.launch
+
+# VS Code
+.vscode/*
+# 但保留一些必要的配置文件（如果需要）
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/c_cpp_properties.json
+
+# Visual Studio
+*.sln
+*.vcxproj*
+*.vcproj
+*.filters
+*.user
+*.suo
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+
+# ==================== 临时和备份文件 ====================
+
+*~
+*.bak
+*.tmp
+*.swp
+*.swo
+*.swn
+*.orig
+*.rej
+*.~lock.*
+
+# ==================== 系统文件 ====================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# ==================== 文档生成文件 ====================
+
+*.chm
+*.chw
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+
+# ==================== 其他输出目录 ====================
+
+# 通用构建目录
+Debug/
+Release/
+build/
+dist/
+out/
+obj/
+bin/
+lib/
+
+# ==================== 版本控制系统 ====================
+
+# SVN
+.svn/
+
+# Mercurial
+.hg/
+
+# Bazaar
+.bzr/
+
+# ==================== 依赖和包管理 ====================
+
+# 包锁文件（根据项目需要）
+package-lock.json
+yarn.lock
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ==================== 自定义忽略规则 ====================
+
+# 在此处添加项目特定的忽略规则
+# 例如：特定于你的硬件板的配置文件
+# *.board
+# *.cfg
+
+# ============================================================
+# 保留空文件夹的说明
+# ============================================================
+#
+# 为了保留空的 Objects 和 Listings 文件夹，你可以：
+# 1. 在 Project/Objects 中创建 .gitkeep 文件
+# 2. 在 Project/Listings 中创建 .gitkeep 文件
+#
+# 创建命令：
+# mkdir -p Project/Objects Project/Listings
+# touch Project/Objects/.gitkeep Project/Listings/.gitkeep
+#
+# 或者，如果你不想使用 .gitkeep 文件，可以创建一个空的 README：
+# echo "# This directory contains build output files" > Project/Objects/README.md
+# echo "# This directory contains listing files" > Project/Listings/README.md
